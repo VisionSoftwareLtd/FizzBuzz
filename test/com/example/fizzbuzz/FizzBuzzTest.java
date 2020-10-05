@@ -13,8 +13,8 @@ class FizzBuzzTest {
 
     @Test
     public void streamTest() {
-        FizzBuzz fizzBuzzSimple = new FizzBuzzStream();
-        checkTo15(fizzBuzzSimple.getValues(15));
+        FizzBuzz fizzBuzzStream = new FizzBuzzStream();
+        checkTo15(fizzBuzzStream.getValues(15));
     }
 
     private void checkTo15(String[] values) {
