@@ -6,7 +6,7 @@ public class FizzBuzzBangStream {
     private static volatile int i = 0;
 
     public static Stream<String> create() {
-        Stream<String> stream = Stream.generate(() -> {
+        return Stream.generate(() -> {
             i++;
             String output = "";
             if (i % 3 == 0)
@@ -15,6 +15,5 @@ public class FizzBuzzBangStream {
                 output += "Buzz";
             return (output.equals("") ? Integer.toString(i) : output);
         });
-        return stream;
     }
 }
